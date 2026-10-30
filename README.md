@@ -67,4 +67,3 @@ Las tres sugerencias visuales existentes no son reconocimiento automático para 
 - `referencias/`: contexto y antecedentes archivados.
 
 No subir ZIP, fotos, bases, conversaciones, credenciales ni derivados de datos a GitHub. No guardar secretos en OneDrive. Mantener secrets de producción en los proveedores; ninguna clave de servicio debe llegar al navegador.
-
