@@ -51,15 +51,18 @@ Los tests usan bases aisladas. Incluyen dos salidas simultáneas desde conexione
 
 ## Integraciones
 
-GitHub, Vercel y Supabase: conexiones verificadas en la sesión. Repositorio de GitHub existente y público; organización Supabase y equipo Vercel aún sin proyectos al verificar.
+GitHub, Vercel y Supabase: conexiones verificadas. El código está publicado en la rama `codex/laboratorio-entrenamiento` del repositorio público, con [PR de revisión #1](https://github.com/almacenspeedway-glitch/inventario_speedway/pull/1).
 
-Pendiente: proyecto Supabase, usuarios reales, RLS, fotos privadas y migración del almacén; publicación en Vercel; bot Telegram y n8n; catálogo oficial Effi. No hay conexión operativa a Telegram, IA remota o Effi. No se ejecutan ajustes en Effi.
+Supabase: proyecto de entrenamiento creado, ocho tablas protegidas con RLS, bucket privado, confirmación transaccional y lista privada de acceso. Se verificaron roles, aislamiento, idempotencia y rechazo de saldo negativo en PostgreSQL, con fixtures revertidas. Ver `database/README.md`. El correo del primer supervisor se registró solo en la configuración privada; no se ha creado una sesión de usuario ni enviado correo.
+
+La interfaz sigue usando el almacén local. Pendiente: conectar Supabase Auth y los flujos de borrador/identificación, transferir evidencia y fotos privadas, verificar concurrencia real en PostgreSQL, publicar en Vercel, activar Telegram/n8n y consultar catálogo oficial Effi. No hay conexión operativa a Telegram, IA remota o Effi. No se ejecutan ajustes en Effi.
 
 Las tres sugerencias visuales existentes no son reconocimiento automático para todas las fotos.
 
 ## Estructura
 
 - `web/`: Next.js, dominio transaccional y pruebas.
+- `database/`: base SQL aplicada a Supabase y pruebas transaccionales sin datos privados.
 - `scripts/`: importador de entrenamiento, lector de fotos y arranque local.
 - `work/`: importaciones, base local y pruebas; no versionar.
 - `outputs/skills/`: tres skills locales revisadas y validadas; todavía no instaladas en el catálogo global de Codex.
