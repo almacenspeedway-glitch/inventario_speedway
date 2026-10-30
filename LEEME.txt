@@ -1,0 +1,15 @@
+INVENTARIO SPEEDWAY
+
+Aplicación activa: web/ (Next.js + TypeScript).
+Fuente activa única: WhatsApp_chat_entrenamiento.zip.
+Abrir: http://127.0.0.1:4174/
+
+Desde la raíz: node scripts/start-lab.mjs
+Requiere compilación previa: en web/, pnpm install --frozen-lockfile y pnpm build.
+Para desarrollo: node scripts/start-lab.mjs --dev.
+
+Borradores y saldos solo de entrenamiento: work/database/speedway-entrenamiento.sqlite.
+No equivale al inventario real; el rol de supervisor es una simulación local.
+El conteo inicial y el prototipo anterior se conservan en referencias/.
+
+Ver README.md para importación, pruebas, límites y próximos pasos.
